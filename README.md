@@ -1,5 +1,5 @@
 # bash-gui
-A simple bash GUI, you can draw lines,boxes,write characters. Maybe you can write a simple game using this framework!  
+A simple bash GUI, you can draw lines,boxes,write characters in the bash commandline. Maybe you can write a simple game using this framework!  
 
 
 

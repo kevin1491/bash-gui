@@ -70,6 +70,16 @@ board_black()
   done
 }
 
+board_white()
+{
+  for ((i=0;i<SCLINES*SCCOLNS;i++));do
+    #board[$i]=2;
+    color[$i]=$(($cwhite+2));
+    bcolor[$i]=$bwhite;
+  done
+}
+
+
 board_flush()
 {
   clear;
@@ -142,6 +152,25 @@ brush_rect()
   done
 }
 
+#draw_line 10 0 100 $bblack
+draw_line()
+{
+  for((i=$2;i<$3;i++));do
+      bcolor[$(($1*SCCOLNS+$i))]=$4;
+      #bcolor[$(((SCCOLNS-1)*SCLINES+$i))]=$bblack;
+  done
+ 
+}
+
+#draw_broken_line 10 0 100 $bblack
+draw_broken_line()
+{
+  for((i=$2;i<$3;i++,i++));do
+      bcolor[$(($1*SCCOLNS+$i))]=$4;
+  done
+ 
+}
+
 #TODO debug this
 move_board()
 {
@@ -164,12 +193,16 @@ draw_box()
 board_main() 
 {
    board_init;
-#   board_random; 
+   board_random; 
 #   board_flush;
-   board_black;
+#   board_black;
    #board_flush_rect 10 10 10 10;
    
+#   draw_broken_line 2 0 100 $bwhite
+
+#   draw_line 2 0 100 $bwhite
 #   brush_rect 40 5 50 40 $ccyan $bwhite
+#   draw_boarder;
    board_flush;
 #   set_pix_char 1 10 "k";
 #   move_board;

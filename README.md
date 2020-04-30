@@ -1,5 +1,7 @@
 # bash-gui
-A simple bash GUI, you can draw lines,boxes,write characters in the bash commandline. Maybe you can write a simple game using this framework!  
+A simple bash GUI, you can draw lines,boxes,write characters in your bash command line. 
+
+Maybe you can write a simple game using this framework!  
 
 
 
@@ -14,6 +16,8 @@ board_init;
 board_random;
 board_flush;
 ````
+
+![random](https://github.com/kevin1491/bash-gui/blob/master/img/random.png)
 
 ## - draw line
 

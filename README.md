@@ -17,7 +17,8 @@ board_random;
 board_flush;
 ````
 
-![random](https://github.com/kevin1491/bash-gui/blob/master/img/random.png)
+![image](https://github.com/kevin1491/bash-gui/raw/master/img/random.png)
+
 
 ## - draw line
 
